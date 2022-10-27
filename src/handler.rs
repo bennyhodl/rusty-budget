@@ -8,9 +8,6 @@ pub fn handle_key_events(key_event: KeyEvent, app: &mut App) -> AppResult<()> {
         KeyCode::Esc => {
             app.running = false;
         }
-        KeyCode::Char('d') => {
-            app.running = false
-        }
         // exit application on Ctrl-D
         KeyCode::Char('d') | KeyCode::Char('D') => {
             if key_event.modifiers == KeyModifiers::CONTROL {
